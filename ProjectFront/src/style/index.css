@@ -16,15 +16,28 @@ body{
   
 }
 
-li{
-  list-style-type: none;
+ul {
+  display: flex;
+  
 
 }
 
-Link{
-  text-decoration: none;
-} 
+li {
+  list-style-type: none;
+  padding: 5px;
+  padding-top: 15px;
+  
+  
+}
 
+Link {
+  text-decoration: none;
+}
+
+#loginNav > li {
+  padding: 5px;
+  padding-top: 10px;
+}
 
 #lineaLogin{
   border-right: 1px solid #ffff;
@@ -119,17 +132,23 @@ p {
 #footer{
   background-color: #FFADAD;
   color: #ffff;
-  margin: 0;
+  margin: 0px;
+  padding:0px;
+}
+footer p {
+  margin: 0px;
+  padding:0px;
 }
 
-/* ---SECCIÓN 3--- */
+/*  ---SECCIÓN 3--- 
 #seccion3{
   height: 100%;
   margin: 100px auto;
   padding: 70px;
   padding-bottom: 20px;
-  background-color: #FFD6A5;
-}
+  background-color: #FFD6A5; 
+}*/
+
 #botonLogin{
   background-color: #9BF6FF;
   color: black;
@@ -148,6 +167,32 @@ label{
   color:#9BF6FF;
   font-weight: bolder;
 }
+
+/*Página de Tablero*/
+#barra {
+  margin:0;
+  padding:0;
+  background-color:#FFD6A5;
+  color: black;
+  font-weight: bold;
+}
+
+#board {
+  margin:0px;
+  padding:0;
+  background-color:#84b47a;
+  height: 100vh;
+}
+
+#lista {
+  margin: 20px;
+  padding: 3%;
+  background-color:#FFADAD;
+  border-radius: 5%;
+  border-color: #d47474;
+  height:fit-content;
+}
+
 
 /* ---Colores---
 rojo: FFADAD, 

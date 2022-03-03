@@ -13,17 +13,19 @@ const Navbar = () => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
-                                <Link to="/">Home</Link>
-                                <Link to="/" >Características</Link>
-                                <Link to="/" >Cómo empezar</Link>
+                                <ul>
+                                    <li><Link to="/" style={{textDecoration: 'none', color: "black"}}>Home</Link></li>
+                                    <li><Link to="/" style={{textDecoration: 'none', color: "black"}} >Características</Link></li>
+                                    <li><Link to="/" style={{textDecoration: 'none', color: "black"}}>Cómo empezar</Link></li>
+                                </ul>
                             </div>
                         </div>
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul id="loginNav" className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item" id="lineaLogin">
-                                <Link to="/login" >Iniciar sesión</Link>
+                                <Link to="/login" style={{textDecoration: 'none', color: "black"}}>Iniciar sesión</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/register" >Registrarse</Link>
+                                <Link to="/register" style={{textDecoration: 'none', color: "black"}}>Registrarse</Link>
                             </li>
                         </ul>
                     </div>

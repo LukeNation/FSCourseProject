@@ -1,7 +1,6 @@
 import React from 'react';
-import imgInicio from '../img/imgInicio.png';
-import Features from './features';
-import Instructions from './instructions';
+import Features from './Features';
+import Instructions from './Instructions';
 
 
 const Home = () => {
