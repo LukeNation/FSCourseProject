@@ -1,0 +1,157 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ---navBar--- */
+.navbar {
+  width: 100%;
+  background-color: #FFADAD;
+  color: #ffff;
+  
+}
+
+li{
+  list-style-type: none;
+
+}
+
+Link{
+  text-decoration: none;
+} 
+
+
+#lineaLogin{
+  border-right: 1px solid #ffff;
+  height: 40px;
+}
+/* ---Fin navBar--- */
+
+/* ---Encabezado--- */
+#Encabezado {
+  background-image: url(https://www.grandespymes.com.ar/wp-content/uploads/2019/10/C%C3%B3mo-organizar-tu-d%C3%ADa-de-trabajo-en-6-pasos.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+
+
+.divaider {
+  border-bottom: 7px solid #FFADAD;
+  width: 50%;
+}
+
+.title {
+  height: 80%;
+  width: 55%;
+  padding: 23px;
+  margin-top: 3%;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 60px;
+  color:#CAFFBF;
+  margin-top: 20px;
+  font-weight: 600;
+  
+}
+#botonInicio{
+  background-color: #CAFFBF;
+  color: #84b47a;
+  border-color: #84b47a;
+}
+
+/* --- Fin Encabezado--- */
+
+/* --- SECCIÓN 1 --- */
+#seccion1{
+  height: 100%;
+  margin: 100px auto;
+  padding: 70px;
+  padding-bottom: 20px;
+
+}
+
+.texto {
+  padding-top: 116px;
+}
+
+img{
+  width: 400px; 
+  height: 400px;
+  margin-bottom: 60px;
+}
+
+h2{
+  font-size: 50px;
+  font-weight: bolder;
+  color: #9BF6FF;
+}
+h3{
+  font-size: 50px;
+  font-weight: bolder;
+  color: #FFD6A5;
+}
+
+p {
+  font-size: 25px;
+  font-weight: bold;
+}
+/* ---SECCIÓN 2--- */
+#seccion2{
+  height: 100%;
+  margin: 100px auto;
+  padding: 70px;
+  padding-bottom: 20px;
+
+}
+
+
+/* ---Footer--- */
+#footer{
+  background-color: #FFADAD;
+  color: #ffff;
+  margin: 0;
+}
+
+/* ---SECCIÓN 3--- */
+#seccion3{
+  height: 100%;
+  margin: 100px auto;
+  padding: 70px;
+  padding-bottom: 20px;
+  background-color: #FFD6A5;
+}
+#botonLogin{
+  background-color: #9BF6FF;
+  color: black;
+  border-color: #71c6ce;
+  font-weight: bold;
+}
+
+#botonRegister{
+  background-color: #9BF6FF;
+  color: black;
+  border-color: #71c6ce;
+  font-weight: bold;
+}
+
+label{
+  color:#9BF6FF;
+  font-weight: bolder;
+}
+
+/* ---Colores---
+rojo: FFADAD, 
+naranja: FFD6A5,
+amarillo: FDFFB6,
+verde: CAFFBF,
+celeste: 9BF6FF  */
