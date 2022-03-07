@@ -11,7 +11,7 @@ body{
 /* ---navBar--- */
 .navbar {
   width: 100%;
-  background-color: #FFADAD;
+  background-color: #212529;
   color: #ffff;
   
 }
@@ -106,7 +106,7 @@ img{
 h2{
   font-size: 50px;
   font-weight: bolder;
-  color: #9BF6FF;
+  color: #FDC500;
 }
 h3{
   font-size: 50px;
@@ -130,31 +130,23 @@ p {
 
 /* ---Footer--- */
 #footer{
-  background-color: #FFADAD;
+  background-color: #212529;
   color: #ffff;
   margin: 0px;
   padding:0px;
+  display:flex;
+  justify-content: center;
 }
 footer p {
   margin: 0px;
   padding:0px;
 }
-
-/*  ---SECCIÓN 3--- 
-#seccion3{
-  height: 100%;
-  margin: 100px auto;
-  padding: 70px;
-  padding-bottom: 20px;
-  background-color: #FFD6A5; 
-}*/
-
-#botonLogin{
-  background-color: #9BF6FF;
-  color: black;
-  border-color: #71c6ce;
-  font-weight: bold;
+footer i {
+  justify-content: center;
 }
+
+/*---Página de Login y Register---*/
+
 
 #botonRegister{
   background-color: #9BF6FF;
@@ -163,35 +155,148 @@ footer p {
   font-weight: bold;
 }
 
-label{
-  color:#9BF6FF;
-  font-weight: bolder;
-}
 
-/*Página de Tablero*/
-#barra {
+
+/* --- Página de Login---*/
+
+#login {
   margin:0;
   padding:0;
-  background-color:#FFD6A5;
+  height:90vh;
+  background: radial-gradient(white, 70vh, #FDC500);
+}
+
+#form {
+  margin: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 5%;
+  border-color:#FDC500;
+  border-style: outset ;
+  background-color: #ffff;
+  height:fit-content;
+}
+
+#botonLogin{
+  background-color: #FDC500;
   color: black;
+  border-color: #eeba00;
   font-weight: bold;
 }
 
-#board {
-  margin:0px;
-  padding:0;
-  background-color:#84b47a;
-  height: 100vh;
+label{
+  color:#FDC500;
+  font-weight: bolder;
 }
 
-#lista {
-  margin: 20px;
-  padding: 3%;
-  background-color:#FFADAD;
-  border-radius: 5%;
-  border-color: #d47474;
-  height:fit-content;
+#iniciarSesion {
+  margin-bottom: 10%;
 }
+/*---Página de Tablero---*/
+/*Barra*/
+#barra {
+  margin:0;
+  padding:10px;
+  background-color:#fd5647c0;
+  color: black;
+  font-weight: bold;
+  display:flex;
+}
+#nombreTablero {
+  margin-left: 2vh;
+  margin-right: 10vh;
+  font-size: 3vh;
+  font-weight: bold;
+  border-style: none;
+  margin-bottom: 1vh;
+  background-color: transparent;
+}
+ #barra button {
+  margin-right: 2vh;
+  border-color:#212529;
+  
+}
+#botonMiembros {
+  color: black;
+  background-color: #FDC500;
+  border-radius: 200vh;
+  font-weight: bolder;
+  padding: 1.3vh;
+}
+#botonInvitar {
+  background-color: #212529;
+  color: #FDC500;
+  font-weight: bolder;
+}
+
+/*Tablero*/
+#board {
+  margin:0;
+  padding:0;
+  background: linear-gradient(to bottom, #FDC500, #ffff);
+  height: 100vh;
+  
+}
+#board1 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/*Lista*/
+#lista {
+  margin: 2vh;
+  padding: 3vh;
+  background-color: #ffff;
+  border-radius: 2vh;
+  border-color: #FDC500 ;
+  border-style:outset;
+  height: fit-content;
+}
+
+#nombreLista {
+  font-size: 2.5vh;
+  font-weight: bold;
+  border-style: none;
+  margin-bottom: 1vh;
+}
+
+
+#botonAddList, #agregar {
+  margin: 2vh;
+  padding: 1vh;
+  color: black;
+  background-color: #ffff;
+  font-weight: bolder;
+  border-color: #FDC500 ;
+  border-style: outset;
+  
+}
+i {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Editor*/
+#editor {
+  display:flex;
+  flex-direction: column;
+  
+}
+#editorBox {
+  font-size: 1.5vh;
+  border-radius: 2vh;
+  border-color: #FDC500;
+  border-style:outset;
+  margin:0;
+}
+#editorTarea {
+  border: none;
+  padding:0;
+}
+#deleteTask i {
+  padding-top: 1vh;
+}
+  
 
 
 /* ---Colores---
