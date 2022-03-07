@@ -6,7 +6,6 @@ const List = () => {
         <div id='lista' className='col-md-3'>
             <h6 id="nombreLista">To do</h6>
             <Task />
-           
         </div>
         )
     }

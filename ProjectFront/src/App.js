@@ -1,11 +1,12 @@
 import {Route, Routes, BrowserRouter} from 'react-router-dom';
-import './style/index.css';
-import Navbar from './components/Navbar.js';
-import Home from './components/Home.js';
-import Footer from './components/Footer.js';
-import Login from './components/Login.js';
-import Register from './components/Register.js';
-import Board from './components/Board.js';
+import Navbar from './components/Navbar';
+import Home from './components/Home/Home';
+import Footer from './components/Footer';
+import Login from './components/Login';
+import Register from './components/Register';
+import Board from './components/Board/Board';
+import './style/index.css'
+
 
 
 function App() {
@@ -13,7 +14,6 @@ function App() {
 <BrowserRouter>
     <div>
     <Navbar/>
-
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/login" element={<Login/>}/>

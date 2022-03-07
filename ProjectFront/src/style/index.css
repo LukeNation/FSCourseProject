@@ -14,94 +14,68 @@ body{
   background-color: #212529;
   color: #ffff;
   
+  height: 80px;
 }
 
-ul {
+.navbar-brand{
+  font-weight:bolder;
+  font-size: 30px;
+}
+
+#navbarNav {
   display: flex;
-  
-
+  justify-content: center;
+  font-weight: 500;
 }
 
-li {
-  list-style-type: none;
-  padding: 5px;
-  padding-top: 15px;
-  
-  
-}
-
-Link {
-  text-decoration: none;
-}
-
-#loginNav > li {
-  padding: 5px;
-  padding-top: 10px;
-}
-
-#lineaLogin{
-  border-right: 1px solid #ffff;
-  height: 40px;
-}
 /* ---Fin navBar--- */
 
 /* ---Encabezado--- */
 #Encabezado {
-  background-image: url(https://www.grandespymes.com.ar/wp-content/uploads/2019/10/C%C3%B3mo-organizar-tu-d%C3%ADa-de-trabajo-en-6-pasos.jpg);
+  background-image: url('../img/flat-lay-calendar-and-headphones-copy-space.jpg');
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 10px;
 }
 
-
-
-.divaider {
-  border-bottom: 7px solid #FFADAD;
-  width: 50%;
-}
-
 .title {
-  height: 80%;
-  width: 55%;
-  padding: 23px;
-  margin-top: 3%;
+ width: 50%;
+ height: 100vh;
+ margin: 10px;
+ padding: 10px;
 }
 
-h1 {
-  font-size: 40px;
-  line-height: 60px;
-  color:#CAFFBF;
-  margin-top: 20px;
-  font-weight: 600;
-  
+.title > h1 {
+  font-size: 3.5vw;
+  font-weight:bolder;
+  color: #ffff;
+  margin: 20px;
 }
+
+.title > p {
+  font-size: 1.5vw;
+  margin: 20px;
+  padding: 5px;
+  width: 75%;
+}
+
 #botonInicio{
-  background-color: #CAFFBF;
-  color: #84b47a;
-  border-color: #84b47a;
+  border-radius: 0%;
+  font-size: 30px;
+  margin-left: 23px;
+  width: 70%;
 }
 
 /* --- Fin Encabezado--- */
 
 /* --- SECCIÓN 1 --- */
-#seccion1{
-  height: 100%;
-  margin: 100px auto;
-  padding: 70px;
-  padding-bottom: 20px;
-
+#Section-1{
+  width: 90%;
+  margin: 60px auto;
+  margin-top: 5%;
 }
 
-.texto {
-  padding-top: 116px;
-}
-
-img{
-  width: 400px; 
-  height: 400px;
-  margin-bottom: 60px;
-}
 
 h2{
   font-size: 50px;
@@ -111,22 +85,30 @@ h2{
 h3{
   font-size: 50px;
   font-weight: bolder;
-  color: #FFD6A5;
+  color: #444747;
+  margin-top: 25%;
+  font-family: 'Secular One', sans-serif;
 }
 
-p {
-  font-size: 25px;
-  font-weight: bold;
+.TitutloFeature > p {
+  font-size: 27px;
 }
+
+
 /* ---SECCIÓN 2--- */
 #seccion2{
-  height: 100%;
-  margin: 100px auto;
-  padding: 70px;
-  padding-bottom: 20px;
-
+  height: 100vh;
+  background-image: url('https://img.freepik.com/foto-gratis/espacio-copia-calendario-vista-superior_23-2148693408.jpg?w=1380');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.instruction > h3 {
+  font-size: 40px;
+  font-weight: 500;
+}
 
 /* ---Footer--- */
 #footer{
@@ -135,6 +117,8 @@ p {
   margin: 0px;
   padding:0px;
   display:flex;
+  height: 10vh;
+  align-items: center;
   justify-content: center;
 }
 footer p {
@@ -297,11 +281,3 @@ i {
   padding-top: 1vh;
 }
   
-
-
-/* ---Colores---
-rojo: FFADAD, 
-naranja: FFD6A5,
-amarillo: FDFFB6,
-verde: CAFFBF,
-celeste: 9BF6FF  */

@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div id="footer">
             <footer>
-                <p className='text-center'>PANA BRO</p>
+                <p className='text-center'> Todos los derechos reservados PANA - 2022  </p>
             </footer>
         </div>
         );
