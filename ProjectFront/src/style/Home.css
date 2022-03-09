@@ -1,0 +1,237 @@
+/* CSS HOME  */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+  
+body{
+    font-family: 'Montserrat', sans-serif;
+    }  
+
+/* ---Encabezado--- */
+#Encabezado {
+    background-image: url('../components/Home/img/flat-lay-calendar-and-headphones-copy-space.jpg');
+    background-size: cover;
+    padding: 10px;
+    padding-bottom: 150px;
+    }
+  
+.title {
+   margin: 10px;
+   height: 100%;
+   padding: 40px;
+padding-bottom: 100px;
+    }
+  
+.title > h1 {
+    font-size: 4rem;
+    font-weight:bolder;
+    color: #ffff;
+    margin: 20px;
+    width: 100%;
+    }
+  
+.title > p {
+    font-size: 2rem;
+    margin: 20px;
+    padding: 5px;
+    width: 85%;
+    }
+  
+#botonInicio{
+    border-radius: 0%;
+    font-size: 2rem;
+    margin-left: 23px;
+    margin-top: 20px;
+    width: 81%;
+    }
+  
+  /* --- Fin Encabezado--- */
+  
+  /* --- SECTION 1 --- */
+#Section-1{
+    width: 90%;
+    margin: 60px auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    }
+  
+.TitutloFeature > h2 {
+    font-size: 50px;
+    color: #444747;
+    margin-top: 20%;
+    font-family: 'Secular One';
+    }
+  
+  
+.TitutloFeature > p {
+    font-size: 27px;
+    }
+
+  /* ---SECTION 1--- */
+  
+  
+  /* ---SECTION 2--- */
+#seccion2{
+    height: 100vh;
+    background-color: #fdc300;
+    background-image: url('https://img.freepik.com/foto-gratis/espacio-copia-calendario-vista-superior_23-2148693408.jpg?w=1380');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  
+.instruction > h3 {
+    font-size: 3rem;
+    font-weight: 900;
+    background-color: #212529;
+    color: #ffff;
+    padding: 26px;
+    border-radius: 50px;
+    }
+
+.Titulo-Oculto {
+    display:none;
+    }
+  
+  /* ---Fin SECTION 2--- */
+  
+  /* ---Footer--- */
+#footer{
+    background-color: #212529;
+    color: #ffff;
+    display:flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    }
+  
+footer > p {
+    font-size: 20px;
+    }
+  /* ---Fin Footer--- */
+  
+  /* Media Querys Home */
+  
+@media (min-width:320px) and (max-width:584px){
+
+    /* ---Encabezado Media Querys---*/
+
+    #Encabezado {
+        background-image: none;
+        background-color: #fdc300;
+    }
+
+    .title {
+      margin:0 auto;
+      height: 100%;
+      padding: 0;
+      
+    }
+      .title > h1 {
+      text-align: center;
+       font-size: 2.5rem;
+       margin: 5px;
+       width: auto;
+    }
+     
+     .title > p {
+      text-align: center;
+       font-size: 1.5rem;
+       width: auto;
+    }
+  
+     #botonInicio{
+      width: 90%;
+      justify-content: center;
+    }
+
+    /* --- Fin Encabezado Media Querys---*/
+
+    /* ---SECTION 2 Media Querys---*/
+
+    .instruction > h3 {
+        display: none;
+      }
+
+
+      .Titulo-Oculto {
+        display:unset;
+        font-weight: 600;
+    }
+
+    /* ---SECTION 2 Media Querys---*/
+}
+
+@media (min-width:766px) and (max-width:1000px){
+
+    /* ---Encabezado Media Querys---*/
+
+        .title {
+        margin:0 auto;
+        width: 50%;
+        padding: 0;
+    }
+  
+       .title > h1 {
+         text-align: center;
+         width: auto;
+    }
+  
+       .title > p {
+         text-align: center;
+         width: auto;
+    }
+
+    /* --- Fin Encabezado Media Querys---*/
+
+    /* ---SECTION 2 Media Querys---*/
+
+    .instruction > h3 {
+        font-size: 2rem;
+    }
+
+    /* --- Fin SECTION 2 Media Querys---*/
+
+}
+
+@media (min-width:320px) and (max-width:767px){
+        
+    /* ---SECTION 1 Media Querys---*/
+
+        .colum-2 {
+        flex-wrap: wrap-reverse;
+    }
+        #Section-1{
+        width: auto;
+        margin: 3px auto;
+    }
+
+        .TitutloFeature > h2 {
+        text-align: center;
+    }
+
+        .TitutloFeature > p {
+        text-align: center;
+    }
+
+    /* --- Fin SECTION 1 Media Querys---*/
+
+    /* ---SECTION 2 Media Querys---*/
+
+        .instruction > h3 {
+        display: none;
+    }
+
+
+        .Titulo-Oculto {
+        display:unset;
+        font-weight: 600;
+    }
+
+    /* --- Fin SECTION 2 Media Querys---*/
+}
+  
+    /* Fin Media Querys HOME */

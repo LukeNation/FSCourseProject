@@ -11,10 +11,7 @@ body{
 /* ---navBar--- */
 .navbar {
   width: 100%;
-  background-color: #212529;
   color: #ffff;
-  
-  height: 80px;
 }
 
 .navbar-brand{
@@ -23,112 +20,12 @@ body{
 }
 
 #navbarNav {
-  display: flex;
   justify-content: center;
   font-weight: 500;
 }
 
 /* ---Fin navBar--- */
-
-/* ---Encabezado--- */
-#Encabezado {
-  background-image: url('../img/flat-lay-calendar-and-headphones-copy-space.jpg');
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  padding: 10px;
-}
-
-.title {
- width: 50%;
- height: 100vh;
- margin: 10px;
- padding: 10px;
-}
-
-.title > h1 {
-  font-size: 3.5vw;
-  font-weight:bolder;
-  color: #ffff;
-  margin: 20px;
-}
-
-.title > p {
-  font-size: 1.5vw;
-  margin: 20px;
-  padding: 5px;
-  width: 75%;
-}
-
-#botonInicio{
-  border-radius: 0%;
-  font-size: 30px;
-  margin-left: 23px;
-  width: 70%;
-}
-
-/* --- Fin Encabezado--- */
-
-/* --- SECCIÓN 1 --- */
-#Section-1{
-  width: 90%;
-  margin: 60px auto;
-  margin-top: 5%;
-}
-
-
-h2{
-  font-size: 50px;
-  font-weight: bolder;
-  color: #FDC500;
-}
-h3{
-  font-size: 50px;
-  font-weight: bolder;
-  color: #444747;
-  margin-top: 25%;
-  font-family: 'Secular One', sans-serif;
-}
-
-.TitutloFeature > p {
-  font-size: 27px;
-}
-
-
-/* ---SECCIÓN 2--- */
-#seccion2{
-  height: 100vh;
-  background-image: url('https://img.freepik.com/foto-gratis/espacio-copia-calendario-vista-superior_23-2148693408.jpg?w=1380');
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.instruction > h3 {
-  font-size: 40px;
-  font-weight: 500;
-}
-
-/* ---Footer--- */
-#footer{
-  background-color: #212529;
-  color: #ffff;
-  margin: 0px;
-  padding:0px;
-  display:flex;
-  height: 10vh;
-  align-items: center;
-  justify-content: center;
-}
-footer p {
-  margin: 0px;
-  padding:0px;
-}
-footer i {
-  justify-content: center;
-}
-
+  
 /*---Página de Login y Register---*/
 
 
