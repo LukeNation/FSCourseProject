@@ -3,7 +3,7 @@ import React from 'react';
 const Bar = () => {
     return (
         <div id='barra' className='container-fluid'>
-            <div className='col-md-4'>
+            <div className='col-md-3 boxTablero'>
             <input type="text" className="form-control" id="nombreTablero" placeholder="Escriba el nombre del tablero"></input>
             </div>
             <div className='col-md-6 ps-5'>
