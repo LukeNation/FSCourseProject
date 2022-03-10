@@ -1,0 +1,122 @@
+/*---Board Style---*/
+/*Bar*/
+#barra {
+    margin:0;
+    padding:10px;
+    background-color:#fd5647c0;
+    color: black;
+    font-weight: bold;
+    display:flex;
+    align-items: center; 
+    
+  } 
+  #nombreTablero {
+    margin-left: 2vh;
+    margin-right: 5vh;
+    font-size: 1rem;
+    font-weight: bold;
+    border-style: none;
+    background-color: transparent;
+  }
+  .botonesBarra {
+    margin: 2vh;
+    border-color:#212529;
+    padding-left: 3rem;
+  }
+  #botonMiembros {
+    color: black;
+    background-color: #FDC500;
+    border-radius: 200vh;
+    font-weight: bolder;
+    padding: 1.3vh;
+    margin: 1vh;
+  }
+  #botonInvitar {
+    background-color: #212529;
+    color: #FDC500;
+    font-weight: bolder;
+    margin-left: 2vh;
+  }
+  
+  /*Board*/
+  #board {
+    margin:0;
+    padding:0;
+    background: linear-gradient(to bottom, #FDC500, #ffff);
+    height: 100vh;
+    
+  }
+  #board1 {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  /*List*/
+  #lista {
+    margin: 2vh;
+    padding: 3vh;
+    background-color: #ffff;
+    border-radius: 2vh;
+    border-color: #FDC500 ;
+    border-style:outset;
+    height: fit-content;
+  }
+  
+  #nombreLista {
+    font-size: 2.5vh;
+    font-weight: bold;
+    border-style: none;
+    margin-bottom: 1vh;
+  }
+  
+  
+  #botonAddList, #agregar {
+    margin: 2vh;
+    padding: 1vh;
+    color: black;
+    background-color: #ffff;
+    font-weight: bolder;
+    border-color: #FDC500 ;
+    border-style: outset;
+    
+  }
+  i {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /*Editor*/
+  #editor {
+    display:flex;
+    flex-direction: column;
+    
+  }
+  #editorBox {
+    font-size: 1.5vh;
+    border-radius: 2vh;
+    border-color: #FDC500;
+    border-style:outset;
+    margin:0;
+  }
+  #editorTarea {
+    border: none;
+    padding:0;
+  }
+  #deleteTask i {
+    padding-top: 1vh;
+  }
+
+  /* Media Querys */
+
+  @media  (min-width:320px) and (max-width:584px) {
+    /* Bar */  
+    #barra {
+          flex-direction: column;
+      }
+      #botonInvitar {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+    /*  Board */
+  }

@@ -1,8 +1,12 @@
 import React from 'react';
+import Navbar from './Navbar.jsx';
 
 
 const Login = () => {
     return (
+        <div>
+            <Navbar />
+        
         <div id='login' className='row justify-content-center'>
         <div className="col-md-4 text-center" id="form">
             <form>
@@ -18,6 +22,7 @@ const Login = () => {
                 </div>
                 <button id='botonLogin' type="submit" className="btn btn-primary">Iniciar sesión</button>
             </form>
+        </div>
         </div>
         </div>
 

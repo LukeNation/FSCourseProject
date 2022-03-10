@@ -1,7 +1,10 @@
 import React from 'react';
+import Navbar from './Navbar';
 
 const Register = () => {
     return (
+        <div>
+            <Navbar />
         <div id='register' className='row justify-content-center'>
         <div className="col-md-4 text-center" id="form">
             <form>
@@ -25,6 +28,7 @@ const Register = () => {
                 </div>
                 <button id='botonRegister' type="submit" className="btn btn-primary">Registrarme</button>
             </form>
+        </div>
         </div>
         </div>
         );

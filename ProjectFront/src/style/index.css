@@ -8,7 +8,7 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ---navBar--- */
+/* ---navBar Home--- */
 .navbar {
   width: 100%;
   color: #ffff;
@@ -24,152 +24,18 @@ body{
   font-weight: 500;
 }
 
-/* ---Fin navBar--- */
-  
-/*---Página de Login y Register---*/
+/* ---navBar Logeado--- */
 
-
-/* --- Página de Login---*/
-
-#login, #register {
-  margin:0;
-  padding:0;
-  height:90vh;
-  background: radial-gradient(white, 70vh, #FDC500);
-}
-
-#form {
-  margin: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border-radius: 5%;
-  border-color:#FDC500;
-  border-style: outset ;
-  background-color: #ffff;
-  height:fit-content;
-}
-
-#botonLogin, #botonRegister{
-  background-color: #FDC500;
-  color: black;
-  border-color: #eeba00;
-  font-weight: bold;
-}
-
-label{
-  color:#FDC500;
-  font-weight: bolder;
-}
-
-#iniciarSesion {
-  margin-bottom: 10%;
-}
-/*---Página de Tablero---*/
-/*Barra*/
-#barra {
-  margin:0;
-  padding:10px;
-  background-color:#fd5647c0;
-  color: black;
-  font-weight: bold;
-  display:flex;
-}
-.boxTablero {
-  border: 1px solid black;
-  max-width: fit-content;
-}
-#nombreTablero {
-  margin-left: 2vh;
-  margin-right: 10vh;
-  font-size: 2.5rem;
-  font-weight: bold;
-  border-style: none;
-  margin-bottom: 1vh;
-  background-color: transparent;
-}
- #barra button {
-  margin-right: 2vh;
-  border-color:#212529;
-  
-}
-#botonMiembros {
-  color: black;
-  background-color: #FDC500;
-  border-radius: 200vh;
-  font-weight: bolder;
-  padding: 1.3vh;
-}
-#botonInvitar {
-  background-color: #212529;
-  color: #FDC500;
-  font-weight: bolder;
-}
-
-/*Tablero*/
-#board {
-  margin:0;
-  padding:0;
-  background: linear-gradient(to bottom, #FDC500, #ffff);
-  height: 100vh;
-  
-}
-#board1 {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-/*Lista*/
-#lista {
-  margin: 2vh;
-  padding: 3vh;
-  background-color: #ffff;
-  border-radius: 2vh;
-  border-color: #FDC500 ;
-  border-style:outset;
-  height: fit-content;
-}
-
-#nombreLista {
-  font-size: 2.5vh;
-  font-weight: bold;
-  border-style: none;
-  margin-bottom: 1vh;
-}
-
-
-#botonAddList, #agregar {
-  margin: 2vh;
-  padding: 1vh;
-  color: black;
-  background-color: #ffff;
-  font-weight: bolder;
-  border-color: #FDC500 ;
-  border-style: outset;
-  
-}
-i {
+.divBotonUsuario {
   display: flex;
   justify-content: flex-end;
 }
-
-/*Editor*/
-#editor {
-  display:flex;
-  flex-direction: column;
-  
+#botonUsuario {
+    color: black;
+    background-color: #FDC500;
+    border-radius: 200vh;
+    font-weight: bolder;
+    padding: 1.3vh;
+    margin: 1vh;
+    justify-content: flex-end;
 }
-#editorBox {
-  font-size: 1.5vh;
-  border-radius: 2vh;
-  border-color: #FDC500;
-  border-style:outset;
-  margin:0;
-}
-#editorTarea {
-  border: none;
-  padding:0;
-}
-#deleteTask i {
-  padding-top: 1vh;
-}
-  
