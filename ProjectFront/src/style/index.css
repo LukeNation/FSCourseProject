@@ -29,9 +29,18 @@ body{
 /*---Página de Login y Register---*/
 
 
+#botonRegister{
+  background-color: #9BF6FF;
+  color: black;
+  border-color: #71c6ce;
+  font-weight: bold;
+}
+
+
+
 /* --- Página de Login---*/
 
-#login, #register {
+#login {
   margin:0;
   padding:0;
   height:90vh;
@@ -49,7 +58,7 @@ body{
   height:fit-content;
 }
 
-#botonLogin, #botonRegister{
+#botonLogin{
   background-color: #FDC500;
   color: black;
   border-color: #eeba00;
