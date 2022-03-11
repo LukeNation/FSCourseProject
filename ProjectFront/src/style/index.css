@@ -8,7 +8,7 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ---navBar--- */
+/* ---navBar Home--- */
 .navbar {
   width: 100%;
   color: #ffff;
@@ -24,9 +24,7 @@ body{
   font-weight: 500;
 }
 
-/* ---Fin navBar--- */
-  
-/*---Página de Login y Register---*/
+/* ---navBar Logeado--- */
 
 
 #botonRegister{
@@ -152,29 +150,17 @@ label{
   border-style: outset;
   
 }
-i {
+
+.divBotonUsuario {
   display: flex;
   justify-content: flex-end;
 }
-
-/*Editor*/
-#editor {
-  display:flex;
-  flex-direction: column;
-  
+#botonUsuario {
+    color: black;
+    background-color: #FDC500;
+    border-radius: 200vh;
+    font-weight: bolder;
+    padding: 1.3vh;
+    margin: 1vh;
+    justify-content: flex-end;
 }
-#editorBox {
-  font-size: 1.5vh;
-  border-radius: 2vh;
-  border-color: #FDC500;
-  border-style:outset;
-  margin:0;
-}
-#editorTarea {
-  border: none;
-  padding:0;
-}
-#deleteTask i {
-  padding-top: 1vh;
-}
-  
