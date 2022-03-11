@@ -12,13 +12,13 @@ const Login = () => {
             <form>
                 <h2 className="text-center">Iniciar sesión</h2>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    <label htmlFor="InputEmail1" className="form-label">Email</label>
+                    <input type="email" className="form-control" id="InputEmail1" aria-describedby="emailHelp" />
                     <div id="emailHelp" className="form-text">Ingresa tu email.</div>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" />
+                    <label htmlFor="InputPassword1" className="form-label">Password</label>
+                    <input type="password" className="form-control" id="InputPassword1" />
                 </div>
                 <button id='botonLogin' type="submit" className="btn btn-primary">Iniciar sesión</button>
             </form>
