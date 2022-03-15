@@ -47,9 +47,4 @@ ALTER TABLE BOARD-LIST ADD FOREIGN KEY (idList) REFERENCES LIST(id);
 ALTER TABLE LIST-TASK ADD FOREIGN KEY (idList) REFERENCES LIST(id);
 ALTER TABLE LIST-TASK ADD FOREIGN KEY (idTask) REFERENCES TASK(id);
 
-/* get "/" SELECT * FROM persona;
-get "/:id" SELECT * FROM persona WHERE id = :id;
-post "/" INSERT INTO persona VALUES ("body")
-update "/:id" UPDATE persona SET nombre = body... WHERE id = :id
-delete "/:id" DELETE persona WHERE id = :id */
 
