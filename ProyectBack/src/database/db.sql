@@ -9,7 +9,8 @@ CREATE TABLE USER (
 CREATE TABLE USER-BOARD (
     id int PRIMARY KEY AUTO_INCREMENT,
     idUser int,
-    idBoard int
+    idBoard int,
+    isAdmin int
 )
 CREATE TABLE BOARD (
     id int PRIMARY KEY AUTO_INCREMENT,
@@ -47,9 +48,4 @@ ALTER TABLE BOARD-LIST ADD FOREIGN KEY (idList) REFERENCES LIST(id);
 ALTER TABLE LIST-TASK ADD FOREIGN KEY (idList) REFERENCES LIST(id);
 ALTER TABLE LIST-TASK ADD FOREIGN KEY (idTask) REFERENCES TASK(id);
 
-/* get "/" SELECT * FROM persona;
-get "/:id" SELECT * FROM persona WHERE id = :id;
-post "/" INSERT INTO persona VALUES ("body")
-update "/:id" UPDATE persona SET nombre = body... WHERE id = :id
-delete "/:id" DELETE persona WHERE id = :id */
 
