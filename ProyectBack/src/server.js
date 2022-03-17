@@ -1,11 +1,17 @@
 const express = require('express')
-const personaRutas = require('./routes/personalRoutes')
+const tablero = require('./routes/boardRoutes')
+const lista = require('./routes/listRoutes')
+const tarea = require('./routes/taskRoutes')
+const usuario = require('./routes/userRoutes')
 const app = express()
 
 app.set('port', process.env.PORT || 4000);
 app.use(express.json())
 
-app.use("/", personaRutas)
+app.use("/board", tablero)
+app.use("/list",lista)
+app.use("/task",tarea)
+app.use("/user",usuario)
 
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'));

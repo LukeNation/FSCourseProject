@@ -23,7 +23,7 @@ module.exports.updateUser = async(id, nombre, apellido, usuario, contrasena) => 
     }
 }
 //VER PUNTUALMENTE ESTO PORQUE ES UN USUARIO ADMINISTRADOR.
-module.exports.updateToAdmin = async(id, nombre, apellido, usuario, contrasena) => {
+module.exports.updateToAdmin = async(idUser, idboard) => {
     const data = await db(`UPDATE USER SET nombre = "${nombre}", apellido = "${apellido}", usuario = ${usuario}, contrasena = ${contrasena} WHERE id = ${id}`)
     return {
         message: `Usuario actualizado con id ${data.id}`

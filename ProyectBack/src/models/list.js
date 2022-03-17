@@ -1,4 +1,5 @@
 const {db} = require('../controllers/database.controller')
+
 // para hacer el get a list/:idList/tasks dudas: no entiendo como emparejar los datos de las tablas con los pk en la vista.
 module.exports.getTasksFromList = async (idList) => {
     const data = await db(`SELECT idTask FROM LIST-TASK WHERE idList = ${idList}`)

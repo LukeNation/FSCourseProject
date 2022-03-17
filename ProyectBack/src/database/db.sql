@@ -9,7 +9,8 @@ CREATE TABLE USER (
 CREATE TABLE USER-BOARD (
     id int PRIMARY KEY AUTO_INCREMENT,
     idUser int,
-    idBoard int
+    idBoard int,
+    isAdmin int
 )
 CREATE TABLE BOARD (
     id int PRIMARY KEY AUTO_INCREMENT,
