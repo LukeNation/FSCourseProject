@@ -21,12 +21,12 @@ const Login = () => {
 
     const onSubmit = () => {
         console.log(body);
-        axios.post('http://localhost:4000/login', body)
+        axios.post('http://localhost:3000/inicio', body)
         .then(({data})=> {
-            console.log(data);
+            console.log(data);// mandar a inicio
         })
         .catch(({response}) => {
-            console.log(response.data);
+            console.log(response);// mensaje contraseña y usuario incorrecto.
         })
     }
 
