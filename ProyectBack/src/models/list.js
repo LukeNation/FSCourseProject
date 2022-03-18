@@ -1,22 +1,26 @@
 const {db} = require('../controllers/database.controller')
 
-// para hacer el get a list/:idList/tasks dudas: no entiendo como emparejar los datos de las tablas con los pk en la vista.
-module.exports.getTasksFromList = async (idList) => {
-    const data = await db(`SELECT idTask FROM LIST-TASK WHERE idList = ${idList}`)
+// para hacer el get a todas las list "/" 
+module.exports.todosList = async () => {
+    const data = await db("SELECT * FROM LIST;")
     console.log(data)
-    const taskData = {};
-    data.forEach((idList) => {
-        taskData.push(this.getTasks(idList))
-    });
     return {
-        list: taskData
+        list: data
     }
 } 
+// para hacer el get a list por id list/:id
+module.exports.listID = async (id) => {
+    const data = await db(`SELECT * FROM LIST WHERE id = ${id}`)
+    console.log(data)
+    return {
+        list : data[0]
+    }  
+}
 
 //para hacer el post a list/new
 module.exports.createList = async(titulo) => {
     const data = await db(`INSERT INTO LIST (titulo) VALUES ("${titulo}")`)
-//hacer lista con tablero
+
     return {
         message: `Lista creada con id ${data.id}`
     }

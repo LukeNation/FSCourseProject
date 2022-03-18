@@ -42,13 +42,14 @@
   #board {
     margin:0;
     padding:0;
-    background: linear-gradient(to bottom, #FDC500, #ffff);
-    height: 100vh;
-    
+    height: 100vh; 
+    background-color: #FDC500;
   }
+
   #board1 {
     display: flex;
     flex-flow: row wrap;
+    background-color: #FDC500;
   }
   
   /*List*/

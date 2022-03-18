@@ -24,7 +24,7 @@ body{
   font-weight: 500;
 }
 
-/* ---navBar2 Logeado--- */
+/* ---navBar2 Logged in--- */
 
 
 #botonRegister{
@@ -35,42 +35,6 @@ body{
 }
 
 
-
-/* --- Página de Login---*/
-
-#login {
-  margin:0;
-  padding:0;
-  height:90vh;
-  background: radial-gradient(white, 70vh, #FDC500);
-}
-
-#form {
-  margin: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border-radius: 5%;
-  border-color:#FDC500;
-  border-style: outset ;
-  background-color: #ffff;
-  height:fit-content;
-}
-
-#botonLogin{
-  background-color: #FDC500;
-  color: black;
-  border-color: #eeba00;
-  font-weight: bold;
-}
-
-label{
-  color:#FDC500;
-  font-weight: bolder;
-}
-
-#iniciarSesion {
-  margin-bottom: 10%;
-}
 /*---Página de Tablero---*/
 /*Barra*/
 #barra {

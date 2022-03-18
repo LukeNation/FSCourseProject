@@ -4,10 +4,12 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
 import Board from './components/Board/Board';
+import Logged from './components/LoggedInUser/Logged';
 import './style/index.css';
 import './style/Home.css';
 import './style/LoginAndRegister.css';
 import './style/Board.css';
+import './style/Logged.css'
 
 
 
@@ -20,7 +22,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/tablero" element={<Board />} />
+          <Route path="/logged" element={<Logged />} />
+          <Route path="/board" element={<Board />} />
         </Routes>
         <Footer />
       </>
