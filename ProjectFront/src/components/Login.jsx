@@ -40,11 +40,28 @@ const Login = () => {
                 <h2 className="text-center">Iniciar sesión</h2>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-                    <input name="usuario" onChange={inputChange} value={body.usuario} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
+                    <input 
+                    name= "usuario" 
+                    onChange= {inputChange} 
+                    value= {body.usuario} 
+                    type= "email"
+                    className= "form-control"
+                    id= "exampleInputEmail1"
+                    aria-describedby= "emailHelp" 
+                    required
+                    />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input name="contraseña" onChange={inputChange} value={body.contraseña} type="password"  className="form-control" id="exampleInputPassword1" required/>
+                    <input
+                    name= "contraseña" 
+                    onChange= {inputChange} 
+                    value= {body.contraseña} 
+                    type= "password"  
+                    className= "form-control" 
+                    id= "exampleInputPassword1" 
+                    required
+                    />
                 </div>
                 <button onClick={onSubmit} id='botonLogin' type="submit" className="btn btn-primary">Iniciar sesión</button>
             </form>
