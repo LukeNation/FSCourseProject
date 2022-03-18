@@ -15,6 +15,7 @@ body{
     background-size: cover;
     padding: 10px;
     padding-bottom: 150px;
+    padding-top: 90px;
     }
   
 .title {
@@ -74,7 +75,8 @@ padding-bottom: 100px;
   
   /* ---SECTION 2--- */
 #seccion2{
-    height: 100vh;
+    height: 100%;
+    padding: 50px;
     background-color: #fdc300;
     background-image: url('../components/Home/img/espacio-copia-calendario-vista-superior_23-2148693408.webp');
     background-size: cover;
