@@ -1,13 +1,25 @@
 import React from 'react';
 import Navbar from './Navbar';
+import axios from 'axios';
 
 const Register = () => {
+    
+    const [formData, setFormData] = useSate ({
+        nombre: "",
+        apellido: "",
+        email: "",
+        password: ""
+    })
+
+    const registerSubmit = (e) {
+        e.preventDefault()
+    }
     return (
         <div>
             <Navbar />
         <div id='register' className='row justify-content-center'>
         <div className="col-md-4 text-center" id="form">
-            <form>
+            <form id= "formRegister" onSubmit={registerSubmit}>
                 <h2 className="text-center">Registrarse</h2>
                 <div className="mb-3">
                     <label htmlFor="nombre" className="form-label">Nombre</label>

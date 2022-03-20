@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
 import Board from './components/Board/Board';
+import Inicio from './components/SignedInUser/Inicio'
 import './style/index.css';
 import './style/Home.css';
 import './style/LoginAndRegister.css';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/inicio" element={<Inicio />} />
           <Route path="/tablero" element={<Board />} />
         </Routes>
         <Footer />

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Instructions = () => {
     return (
-        <div id='seccion2'>
+        <div id='seccion2' >
             <div className='instruction text-center'>
                 <h3>Aprende a usar PANA en 5 minutos !</h3>
                 <div className="ratio ratio-16x9">
