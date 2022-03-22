@@ -17,16 +17,19 @@ module.exports.getBoard = async (id) => {
     }  
 }
 
-//para hacer el post a board/new
+//para hacer el post a board/new   //Agregue validacion de usuario.
 module.exports.createBoard = async(idUser, titulo, autor) => {
     const idU = await db(`SELECT id FROM USER WHERE USER.id = ${idUser} `)
     if (idU != null){
-    const data = await db(`INSERT INTO BOARD (titulo, autor) VALUES ("${titulo}", "${autor}")`)
+        const data = await db(`INSERT INTO BOARD (titulo, autor) VALUES ("${titulo}", "${autor}")`)
 
-    return {
-        message: `Tablero creado con id ${data.id}`
+        return {
+            message: `Tablero creado con id ${data.id}`
     }
+    } else{
+        console.log("Usuario invalido")
     }
+
 }
 
 //para hacer el put a board/update/:id
