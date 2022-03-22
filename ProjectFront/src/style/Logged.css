@@ -1,0 +1,66 @@
+
+/*---Logged Page---*/
+
+
+#logged {
+    margin:0;
+    padding:0;
+    background-color: #FDC500;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+  }
+
+#loggedMenu {
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+#loggedContent {
+  height: 100vh;
+  margin:0px;
+  padding-bottom: 0px;  
+}
+
+#textContent {
+  height:100vh;
+  margin:0px;
+  padding: 0px;
+}
+#textoP {
+  font-size: 1.2rem;
+}
+
+#imgBoardsBtn {
+  height: 100vh;
+  margin-top: 5vh;
+  display: flex;
+
+}
+#imgLogged {
+  margin-top: 4vh;
+  border-radius: 1%;
+  box-shadow: #cfa611 5px 5px 5px;
+}
+
+#tablerosUsuario {
+  height: 30%;
+  display: flex;
+  flex-direction: column;  
+  flex-wrap: wrap;
+}
+
+#botonCrearTablero {
+  margin-top: 15px;
+}
+
+
+
+
+
+
+
