@@ -1,14 +1,10 @@
 const {db} = require('../controllers/database.controller')
-// para hacer el get a board/:idUser dudas: no entiendo como emparejar los datos de las tablas con los pk en la vista.
-module.exports.getBoardsFromUser = async (idUser) => {
-    const data = await db(`SELECT idBoard FROM USER-BOARD WHERE idUser = ${idUser}`)
-    console.log(data)//[1,2,3]
-    const boardsData = {};
-    data.forEach((idBoard) => {
-        boardsData.push(this.getBoard(idBoard))
-    });
+// para hacer el get a todos los board "/" que NO esta en las routes.
+module.exports.todosBoards = async () => {
+    const data = await db("SELECT * FROM board;")
+    console.log(data)
     return {
-        board: boardsData
+        board: data
     }
 } 
 
@@ -20,25 +16,16 @@ module.exports.getBoard = async (id) => {
         board : data[0]
     }  
 }
-// como hacer el get para board/:idBoard/lists????
-module.exports.getListFromBoard = async (idBoard) => {
-    const data = await db(`SELECT idBoard FROM BOARD-LIST WHERE idList = ${idBoard}`)
-    console.log(data)
-    const listData = {};
-    data.forEach((idBoard) => {
-        listsData.push(this.getList(idBoard))
-    });
-    return {
-        list: listData
-    }
-} 
 
 //para hacer el post a board/new
-module.exports.createBoard = async(titulo, autor) => {
+module.exports.createBoard = async(idUser, titulo, autor) => {
+    const idU = await db(`SELECT id FROM USER WHERE USER.id = ${idUser} `)
+    if (idU != null){
     const data = await db(`INSERT INTO BOARD (titulo, autor) VALUES ("${titulo}", "${autor}")`)
-    const data1= await db(`INSERT INTO USER-BOARD (idUser, idBoard) VALUES ("${autor}", "${data.id}")`)
+
     return {
         message: `Tablero creado con id ${data.id}`
+    }
     }
 }
 
@@ -52,7 +39,6 @@ module.exports.updateBoard = async(id, titulo, color) => {
 
 //para hacer el delete a board/delete/:id
 module.exports.deleteBoard = async (id) => {
-    const data1 = await db (`DELETE FROM USER-BOARD WHERE idboard = ${id}`);
     const data = await db(`DELETE FROM BOARD WHERE id = ${id}`)
     return {
         message: `Tablero eliminado con id ${data.id}`

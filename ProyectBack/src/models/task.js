@@ -1,4 +1,14 @@
 const {db} = require('../controllers/database.controller')
+
+//para hacer el get a todas las tareas
+module.exports.todosTask = async () => {
+    const data = await db("SELECT * FROM TASK;")
+    console.log(data)
+    return {
+        tarea: data
+    }
+} 
+
 // para hacer el get a task/:id
 module.exports.getTask = async (id) => {
     const data = await db(`SELECT * FROM TASK WHERE id = ${id}`)
