@@ -1,9 +1,8 @@
-const {getBoardsFromUser, getBoard, getListFromBoard, createBoard, updateBoard, deleteBoard} = require('../models/board')
+const {todosBoards, getBoard, createBoard, updateBoard, deleteBoard} = require('../models/board')
 
-module.exports.getBoardsFromUser = async (req,res) => {
-    const {idUser} = req.params
+module.exports.todosBoardsController = async (req,res) => {
     try {
-        const boards = await getBoardsFromUser(idUser)
+        const boards = await todosBoards()
         return res.send(boards)
     } catch(err) {
        
@@ -11,7 +10,7 @@ module.exports.getBoardsFromUser = async (req,res) => {
     }
 }
 
-module.exports.getBoard = async(req,res) => {
+module.exports.getBoardController = async(req,res) => {
     const {id} = req.params
     try {
         const board = await getBoard(id)
@@ -21,18 +20,7 @@ module.exports.getBoard = async(req,res) => {
     }
 }
 
-module.exports.getListFromBoard = async (req,res) => {
-    const {idBoard} = req.params
-    try {
-        const lists = await getListFromBoard(idBoard)
-        return res.send(lists)
-    } catch(err) {
-       
-        return res.send(err)
-    }
-}
-
-module.exports.createBoard = async(req,res) => {
+module.exports.createBoardController = async(req,res) => {
     const {titulo,autor} = req.params
     try {
         const board = await createBoard(titulo,autor)
@@ -42,18 +30,18 @@ module.exports.createBoard = async(req,res) => {
     }
 }
 
-module.exports.updateBoard = async (req,res) => {
+module.exports.updateBoardController = async (req,res) => {
     const {id, titulo, color} = req.params
     try {
-        const boards = await updateBoard(id, titulo, color)
-        return res.send(boards)
+        const board = await updateBoard(id, titulo, color)
+        return res.send(board)
     } catch(err) {
        
         return res.send(err)
     }
 }
 
-module.exports.deleteBoard = async(req,res) => {
+module.exports.deleteBoardController = async(req,res) => {
     const {id} = req.params
     try {
         const board = await deleteBoard(id)

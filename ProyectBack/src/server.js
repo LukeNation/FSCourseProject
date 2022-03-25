@@ -1,9 +1,9 @@
 const express = require('express')
 const cors = requiere ('cors');
-const tablero = require('./routes/boardRoutes')
-const lista = require('./routes/listRoutes')
-const tarea = require('./routes/taskRoutes')
-const usuario = require('./routes/userRoutes')
+const tablero = require('./routes/boardRoutes.js')
+const lista = require('./routes/listRoutes.js')
+const tarea = require('./routes/taskRoutes.js')
+const usuario = require('./routes/userRoutes.js')
 const app = express()
 
 app.set('port', process.env.PORT || 4000);
@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/board", tablero)
 app.use("/list",lista)
 app.use("/task",tarea)
-app.use("/user",usuario)
+app.use("/user",usuario) //faltan agregar las app.use para boardList, listTask y userBoard
 
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'));

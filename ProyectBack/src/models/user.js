@@ -15,7 +15,7 @@ module.exports.getUserInfo = async (id) => {
         user : data[0]
     }  
 }
-
+//hay que validar el usuario a ver si ya existe.
 module.exports.createUser = async(nombre, apellido, usuario, contrasena) => {
     const data = await db(`INSERT INTO USER(nombre, apellido, usuario, contrasena) VALUES ("${nombre}", "${apellido}", ${usuario}, ${contrasena})`)
 
