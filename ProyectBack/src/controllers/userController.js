@@ -1,6 +1,16 @@
+const {getUserInfo, createUser, updateUser, updateUserToAdmin, todosUsers} = require('../models/user')
 
-const {getUserInfo, createUser, updateUser, updateUserToAdmin} = require('../models/user')
-module.exports.getUserInfo = async (req,res) => {
+module.exports.todosUsersController = async (req,res) => {
+    try {
+        const user = await todosUsers()
+        return res.send(user)
+    } catch(err) {
+       
+        return res.send(err)
+    }
+}
+
+module.exports.getUserInfoController = async (req,res) => {
     const {id} = req.params
     try {
         const user = await getUserInfo(id)
@@ -11,32 +21,32 @@ module.exports.getUserInfo = async (req,res) => {
     }
 }
 
-module.exports.createUser = async(req,res) => {
+module.exports.createUserController = async(req,res) => {
     const {nombre, apellido, usuario, contrasena} = req.params
     try {
-        const task = await createUser(nombre, apellido, usuario, contrasena)
-        return res.send(task)
+        const user = await createUser(nombre, apellido, usuario, contrasena)
+        return res.send(user)
     } catch(err) {
         return res.send(err)
     }
 }
 
-module.exports.updateUser = async (req,res) => {
+module.exports.updateUserController = async (req,res) => {
     const {id, nombre, apellido, usuario, contrasena} = req.params
     try {
-        const task = await updateUser(id, nombre, apellido, usuario, contrasena)
-        return res.send(task)
+        const user = await updateUser(id, nombre, apellido, usuario, contrasena)
+        return res.send(user)
     } catch(err) {
        
         return res.send(err)
     }
 }
 
-module.exports.updateUserToAdmin = async(req,res) => {
+module.exports.updateUserToAdminController = async(req,res) => {
     const {id} = req.params
     try {
-        const task = await updateUserToAdmin(id)
-        return res.send(task)
+        const user = await updateUserToAdmin(id)
+        return res.send(user)
     } catch(err) {
         return res.send(err)
     }

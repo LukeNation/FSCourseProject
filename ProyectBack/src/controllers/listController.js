@@ -1,17 +1,26 @@
-const {getTasksFromList, createList, updateList, deleteList} = require('../models/list')
+const {todosList, listID, createList, updateList, deleteList, listID} = require('../models/list')
 
-module.exports.getTasksFromList = async (req,res) => {
+module.exports.todosListController = async (req,res) => {
+    try {
+        const list = await todosList()
+        return res.send(list)
+    } catch(err) {
+       
+        return res.send(err)
+    }
+}
+module.exports.listIDController = async (req,res) => {
     const {idList} = req.params
     try {
-        const tasks = await getTasksFromList(idList)
-        return res.send(tasks)
+        const list = await listID(idList)
+        return res.send(list)
     } catch(err) {
        
         return res.send(err)
     }
 }
 
-module.exports.createList = async(req,res) => {
+module.exports.createListController = async(req,res) => {
     const {titulo} = req.params
     try {
         const list = await createList(titulo)
@@ -21,22 +30,22 @@ module.exports.createList = async(req,res) => {
     }
 }
 
-module.exports.updateList = async (req,res) => {
+module.exports.updateListController = async (req,res) => {
     const {id, titulo} = req.params
     try {
-        const lists = await updateList(id, titulo)
-        return res.send(lists)
+        const list = await updateList(id, titulo)
+        return res.send(list)
     } catch(err) {
        
         return res.send(err)
     }
 }
 
-module.exports.deleteList = async(req,res) => {
+module.exports.deleteListController = async(req,res) => {
     const {id} = req.params
     try {
-        const board = await deleteList(id)
-        return res.send(board)
+        const list = await deleteList(id)
+        return res.send(list)
     } catch(err) {
         return res.send(err)
     }
