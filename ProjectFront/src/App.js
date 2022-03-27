@@ -3,7 +3,7 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
-import Board from './components/Board/Board';
+import Board from './components/Board';
 import Logged from './components/LoggedInUser/Logged';
 import './style/index.css';
 import './style/Home.css';

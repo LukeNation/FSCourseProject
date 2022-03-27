@@ -1,21 +1,14 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 const Bar = () => {
+  
     return (
         <div id='barra' className='container-fluid'>
             <div className='col-md-3 boxTablero'>
-                <input type="text" className="form-control" id="nombreTablero" placeholder="Escriba el nombre del tablero"></input>
+                <input type="text" className="form-control m-2" id="nombreTablero" placeholder="Escriba el nombre del tablero"></input>
             </div>
-            <div className='col-md-9 botonesBarra'>
-                <button id="botonUsuario" type="button" className="btn btn-secondary">LU</button>
-                <button id="botonMiembros" type="button" className="btn btn-secondary">MA</button>
-                <button id="botonMiembros" type="button" className="btn btn-secondary">AG</button>
-                <button id="botonMiembros" type="button" className="btn btn-secondary">PA</button>
-                <button id="botonInvitar" type="button" className="btn btn-success">Invitar +</button>
-            </div>
-
-
+                <button id="botonInvitar" type="button" className="btn btn-success ms-auto">Invitar +</button>
         </div>
 
     );

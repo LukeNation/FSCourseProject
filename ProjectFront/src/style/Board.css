@@ -18,25 +18,7 @@
     border-style: none;
     background-color: transparent;
   }
-  .botonesBarra {
-    margin: 2vh;
-    border-color:#212529;
-    padding-left: 3rem;
-  }
-  #botonMiembros {
-    color: black;
-    background-color: #FDC500;
-    border-radius: 200vh;
-    font-weight: bolder;
-    padding: 1.3vh;
-    margin: 1vh;
-  }
-  #botonInvitar {
-    background-color: #212529;
-    color: #FDC500;
-    font-weight: bolder;
-    margin-left: 2vh;
-  }
+
   
   /*Board*/
   #board {
@@ -45,8 +27,10 @@
     height: 100vh; 
     background-color: #FDC500;
   }
+  
 
   #board1 {
+    height: 100vh;
     display: flex;
     flex-flow: row wrap;
     background-color: #FDC500;
@@ -107,6 +91,9 @@
     padding-top: 1vh;
   }
 
+  #tareas {
+  border-bottom: 2px solid black;
+  }
   /* Media Querys */
 
   @media  (min-width:320px) and (max-width:584px) {

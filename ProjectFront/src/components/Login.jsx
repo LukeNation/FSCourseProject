@@ -33,10 +33,11 @@ const Login = () => {
                 
             }
             
-        }catch(err) {
+            } catch(err) {
             alert('Usuario o contraseña incorrectos')
             console.error(err)
         }
+
 
     }
 

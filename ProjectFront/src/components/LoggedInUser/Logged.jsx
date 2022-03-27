@@ -1,12 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import Navbar2 from '../Navbar2';
 import Feature_3 from '../Home/img/Feature_3.webp'; 
+import {useNavigate} from 'react-router-dom';
 
 
 const Logged = () => {
 
-    const [name, setName] = useState ('Agustin');
-    const [table, setTable] = useState (['table 1', 'table 2', 'table 3']);
+    const [name, setName] = useState ([{
+        id: '0',
+        nombre: 'Agustin'
+    }]);
+    const [board, setBoard] = useState ([{
+        id:'0',
+        title:'Tarea 1'
+    }]);
 
     useEffect(()=> {
     const getName = () => {
@@ -14,21 +21,27 @@ const Logged = () => {
         .then(res => res.json())
         .then(res => setName(res))
     }    
-    const getTable = () => {
-        fetch('http://localhost:4000/tables')
+    const getBoard = () => {
+        fetch('http://localhost:4000/:id')
         .then(res => res.json())
-        .then(res => setTable(res))
+        .then(res => setBoard(res))
     }
     getName();
-    getTable();
+    getBoard();
     }, [])
+
+    const navigate = useNavigate();
+    
+    const nuevoTablero = () => {
+        navigate('/board');
+    }
 
     return (
         <div>
             <Navbar2 />
             <div className="container-fluid" id="FondoTogged">
                 <div className="tituloLogged text-center">
-                    <h1>¡Hola, {name}!</h1>
+                    <h1 key={name.id}>¡Hola,{name.nombre}!</h1>
                     <p>Qué bueno que llegaste. </p>
                     <p>¿Estás listx para crear un nuevo tablero o seguir trabajando en un proyecto anterior?</p>
                 </div>
@@ -45,16 +58,13 @@ const Logged = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>{table[0]}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{table[1]}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>{table[2]}</td>
-                                    </tr>
+                                    {board.map(board =>
+                                        <tr>
+                                            <th key={board.id}>{board.titulo}</th>
+                                        </tr>
+                                    )}
                                 </tbody>
+                                <button onClick={nuevoTablero} type='button' className='btn btn-dark btn-lg'>Crear Tablero</button>
                             </table>
                         </div>
                     </div>
@@ -66,11 +76,3 @@ const Logged = () => {
 
 export default Logged;
 
-{/* <tbody>
-{table.map(
-    <tr>
-        <th>{table.id}</th>
-        <th>{table.nombre}</th>
-    </tr>
-)}
-</tbody> */}
