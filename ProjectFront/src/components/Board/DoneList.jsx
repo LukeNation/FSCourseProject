@@ -8,7 +8,7 @@ function DoneList() {
                   <table className="table text-center">
                       <thead className="thead-dark">
                           <tr>
-                              <h3 id='tareas'>Tareas listas</h3>
+                              <th id='tareas'>Tareas listas</th>
                           </tr>
                       </thead>
                       <tbody>

@@ -8,10 +8,7 @@ const Bar = () => {
             <div className='col-md-3 boxTablero'>
                 <input type="text" className="form-control m-2" id="nombreTablero" placeholder="Escriba el nombre del tablero"></input>
             </div>
-                <button id="botonEliminarTablero" type="button" className="btn btn-success">Eliminar Tablero</button>
-                <button id="botonInvitar" type="button" className="btn btn-success">Invitar +</button>
-                
-                
+                <button id="botonInvitar" type="button" className="btn btn-success ms-auto">Invitar +</button>
         </div>
 
     );

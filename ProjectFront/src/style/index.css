@@ -33,3 +33,98 @@ body{
   border-color: #71c6ce;
   font-weight: bold;
 }
+
+
+/*---Página de Tablero---*/
+/*Barra*/
+#barra {
+  margin:0;
+  padding:10px;
+  background-color:#fd5647c0;
+  color: black;
+  font-weight: bold;
+  display:flex;
+}
+#nombreTablero {
+  margin-left: 2vh;
+  margin-right: 10vh;
+  font-size: 3vh;
+  font-weight: bold;
+  border-style: none;
+  margin-bottom: 1vh;
+  background-color: transparent;
+}
+ #barra button {
+  margin-right: 2vh;
+  border-color:#212529;
+  
+}
+#botonMiembros {
+  color: black;
+  background-color: #FDC500;
+  border-radius: 200vh;
+  font-weight: bolder;
+  padding: 1.3vh;
+}
+#botonInvitar {
+  background-color: #212529;
+  color: #FDC500;
+  font-weight: bolder;
+}
+
+/*Tablero*/
+#board {
+  margin:0;
+  padding:0;
+  background: linear-gradient(to bottom, #FDC500, #ffff);
+  height: 100vh;
+  
+}
+#board1 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/*Lista*/
+#lista {
+  margin: 2vh;
+  padding: 3vh;
+  background-color: #ffff;
+  border-radius: 2vh;
+  border-color: #FDC500 ;
+  border-style:outset;
+  height: fit-content;
+}
+
+#nombreLista {
+  font-size: 2.5vh;
+  font-weight: bold;
+  border-style: none;
+  margin-bottom: 1vh;
+}
+
+
+#botonAddList, #agregar {
+  margin: 2vh;
+  padding: 1vh;
+  color: black;
+  background-color: #ffff;
+  font-weight: bolder;
+  border-color: #FDC500 ;
+  border-style: outset;
+  
+}
+
+.divBotonUsuario {
+  display: flex;
+  justify-content: flex-end;
+}
+#botonUsuario {
+    color: black;
+    background-color: #FDC500;
+    border-radius: 200vh;
+    font-weight: bolder;
+    padding: 1.3vh;
+    margin: 1vh;
+    justify-content: flex-end;
+}

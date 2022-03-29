@@ -29,14 +29,12 @@ const Login = () => {
             
             if(data.lenght !== 0) {
                 console.log(data[0]);
-                navigate("/Board")
-                
+                navigate("/Board") 
             }else{
                 alert('Usuario o contraseña incorrectos')
             }
             
             } catch(err) {
-            alert('Usuario o contraseña incorrectos')
             console.error(err)
         }
 

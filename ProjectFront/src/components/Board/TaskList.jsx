@@ -1,15 +1,16 @@
 import React from 'react'
 
-function TaskList({createTask, SetCreateTask}) {
+function TaskList({createTask, setCreateTask}) {
 
     const handelChange = (e) => {
-    SetCreateTask({
+    setCreateTask({
         ...createTask,
         [e.target.name]: e.target.value
     })
 }
 
-    const handelSubmit = () => {
+    const handelSubmit = (e) => {
+        console.log(createTask)
         // validacion de datos
         if(createTask.titulo === ''){
             alert('todos los campos son obligatorios')
@@ -28,7 +29,7 @@ function TaskList({createTask, SetCreateTask}) {
         fetch('http://localhost:4000/create', requestInit)
         .then(res => res.json())
         .then(res => console.log(res))
-        .then(res => SetCreateTask(res))
+        .then(res => setCreateTask(res))
     }
 
 
@@ -47,7 +48,6 @@ function TaskList({createTask, SetCreateTask}) {
                             name="title"
                         />
                     </form>
-                    <button className="btn btn-primary btn-lg" type='Submit'>Agregar</button>
                 </div>
             </div>
         </>
