@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Bar from './Board/Bar';
 import TaskList from './Board/TaskList';
 import ToDoList from './Board/ToDoList';
@@ -8,13 +8,20 @@ import Navbar2 from './Navbar2';
 
 
 const Board = () => {
+
+    const [createTask, setCreateTask] = useState([{
+        id: '',
+        title:''
+    }]);
+
+
     return (
         <div className='tablero1'>
-            <Navbar2 />
+            <Navbar2/>
             <div id="board" className='container-fluid'>
-                <Bar />
+                <Bar/>
                 <div id="board1">
-                    <TaskList />
+                    <TaskList createTask={createTask} setCreateTask={setCreateTask}/>
                     <ToDoList/>
                     <DoneList/>
                 </div>

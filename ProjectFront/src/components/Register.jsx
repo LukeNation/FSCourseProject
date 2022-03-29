@@ -13,6 +13,7 @@ const Register = () => {
         password: ""
     })
     const dataSignUpSubmit = async (e) => {
+        console.log(formData)
         e.preventDefault()
         
         let { nombre, apellido, email, password } = formData
