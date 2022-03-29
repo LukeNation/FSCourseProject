@@ -10,6 +10,7 @@ function TaskList({createTask, setCreateTask}) {
 }
 
     const handelSubmit = (e) => {
+        e.preventDefault();
         console.log(createTask)
         // validacion de datos
         if(createTask.titulo === ''){

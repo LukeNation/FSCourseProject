@@ -95,6 +95,17 @@
   #tareas {
   border-bottom: 2px solid black;
   }
+
+  #botonTask{
+    border: none;
+  }
+  .bi-file-x{
+    color: red;
+  }
+
+  #botonTask > .bi{
+    font-size: 25px;
+  }
   /* Media Querys */
 
   @media  (min-width:320px) and (max-width:584px) {
