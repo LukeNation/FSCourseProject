@@ -10,7 +10,12 @@
     align-items: center; 
     
   } 
+  #boxTablero {
+    height: auto;
+    width:auto;
+  }
   #nombreTablero {
+    width:fit-content;
     margin-left: 2vh;
     margin-right: 5vh;
     font-size: 1rem;
@@ -19,7 +24,30 @@
     background-color: transparent;
   }
 
-
+  #barra button {
+    margin-right: 2vh;
+    border-color:#212529;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #botonMiembros, #botonUsuario {
+    color: black;
+    background-color: #FDC500;
+    border-radius: 200vh;
+    font-weight: bolder;
+    padding: 1.3vh;
+  }
+  #botonInvitar, #botonEliminarTablero {
+    background-color: #212529;
+    border-color:#212529;
+    color: #FDC500;
+    font-weight: bolder;
+    margin-right: 2vh;
+    margin-bottom: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   
   /*Board*/
   #board {
@@ -31,7 +59,7 @@
   
 
   #board1 {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-flow: row wrap;
     background-color: #FDC500;
@@ -45,7 +73,8 @@
     border-radius: 2vh;
     border-color: #FDC500 ;
     border-style:outset;
-    height: fit-content;
+    height:min-content;
+    width:auto;
   }
   
   #nombreLista {
@@ -97,15 +126,29 @@
   }
   /* Media Querys */
 
-  @media  (min-width:320px) and (max-width:584px) {
+  @media (min-width:1010px) and (max-width:1149px){
+    
+
+}
+
+
+@media (min-width:766px) and (max-width:1010px){
+
+
+
+}
+
+
+@media (min-width:0px) and (max-width:767px){
+
     /* Bar */  
     #barra {
-          flex-direction: column;
+           flex-direction: column;
+           flex-wrap: wrap;
       }
-      #botonInvitar {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+    
     /*  Board */
+    #board {
+      height:auto;
+    }
   }
