@@ -9,19 +9,19 @@ const Login = () => {
     let navigate = useNavigate()
 
     const [formData, setFormData] = useState({
-        email: "", 
-        password: ""
+        usuario: "", 
+        contrasena: ""
     })
 
     const iniciarSesion = async (e) => {
         e.preventDefault()
         console.log(formData);
-        let {email, password} = formData
+        let {usuario, contrasena} = formData
         
         try {
-            const respuesta = await fetch('http://localhost:4000/user', {
+            const respuesta = await fetch('http://localhost:4000/user/info/:id', {
                 method: "POST",
-                body: JSON.stringify({email, password}),
+                body: JSON.stringify({usuario, contrasena}),
                 headers: {'Content-Type': 'application/json'}
             })
     
@@ -29,7 +29,7 @@ const Login = () => {
             
             if(data.lenght !== 0) {
                 console.log(data[0]);
-                navigate("/Board") 
+                navigate("/board") 
             }else{
                 alert('Usuario o contraseña incorrectos')
             }
@@ -50,11 +50,11 @@ const Login = () => {
                 <h2 className="text-center">Iniciar sesión</h2>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-                    <input name="email" onChange={(e) => setFormData({...formData, email: e.target.value})} value={formData.email} type="email" className= "form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
+                    <input name="usuario" onChange={(e) => setFormData({...formData, usuario: e.target.value})} value={formData.usuario} type="email" className= "form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input name="password" onChange={(e) => setFormData({...formData, password: e.target.value})} value={formData.password} type="password" className="form-control" id="exampleInputPassword1" required/>
+                    <input name="contrasena" onChange={(e) => setFormData({...formData, contrasena: e.target.value})} value={formData.contrasena} type="password" className="form-control" id="exampleInputPassword1" required/>
                 </div>
                 <button id='botonLogin' type="submit" className="btn btn-primary">Iniciar sesión</button>
             </form>
