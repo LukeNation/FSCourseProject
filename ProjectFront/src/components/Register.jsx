@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Navbar from './Navbar';
-import axios from 'axios';
 
 
 
@@ -9,18 +8,18 @@ const Register = () => {
     const [formData, setFormData] = useState({
         nombre: "",
         apellido: "",
-        email: "",
-        password: ""
+        usuario: "",
+        contrasena: ""
     })
     const dataSignUpSubmit = async (e) => {
         console.log(formData)
         e.preventDefault()
         
-        let { nombre, apellido, email, password } = formData
+        let { nombre, apellido, usuario, contrasena } = formData
         try {
             const respuesta = await fetch('http://localhost:4000/new', {
                 method: "POST",
-                body: JSON.stringify({ nombre, apellido, email, password }),
+                body: JSON.stringify({ nombre, apellido, usuario, contrasena }),
                 headers: { 'Content-Type': 'application/json' }
             })
 
@@ -40,20 +39,20 @@ const Register = () => {
                         <h2 className="text-center">Registrarse</h2>
                         <div className="form-group mb-3">
                             <label htmlFor="nombre" className="form-label">Nombre</label>
-                            <input type="text" onChange={(e) => setFormData({...formData, nombre: e.target.value})} value= {formData.nombre} className="form-control" id="nombre" />
+                            <input name="nombre" type="text" onChange={(e) => setFormData({...formData, nombre: e.target.value})} value= {formData.nombre} className="form-control" id="nombre" />
                         </div>
                         <div className="form-group mb-3">
                             <label htmlFor="apellido" className="form-label">Apellido</label>
-                            <input type="text" onChange={(e) => setFormData({...formData, apellido: e.target.value})} value = {formData.apellido} className="form-control" id="apellido" />
+                            <input name="apellido" type="text" onChange={(e) => setFormData({...formData, apellido: e.target.value})} value = {formData.apellido} className="form-control" id="apellido" />
                         </div>
                         <div className="form-group mb-3">
-                            <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-                            <input type="email" onChange={(e) => setFormData({...formData, email: e.target.value})} value={formData.email} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <label htmlFor="exampleInputusuario1" className="form-label">Email</label>
+                            <input name="usuario" type="email" onChange={(e) => setFormData({...formData, usuario: e.target.value})} value={formData.usuario} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                             <div id="emailHelp" className="form-text">Ingresa tu email.</div>
                         </div>
                         <div className="form-group mb-3">
                             <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                            <input type="password" onChange={(e) => setFormData({...formData, password: e.target.value})} value={formData.password} className="form-control" id="exampleInputPassword1" />
+                            <input name="contrasena" type="password" onChange={(e) => setFormData({...formData, contrasena: e.target.value})} value={formData.contrasena} className="form-control" id="exampleInputPassword1" />
                         </div>
                         <button id='botonRegister' type="submit" className="btn btn-primary">Registrarme</button>
                     </form>

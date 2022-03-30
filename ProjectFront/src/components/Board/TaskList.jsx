@@ -27,7 +27,7 @@ function TaskList({createTask, setCreateTask}) {
         }
 
 
-        fetch('http://localhost:4000/create', requestInit)
+        fetch('http://localhost:4000/task/new', requestInit)
         .then(res => res.json())
         .then(res => console.log(res))
         .then(res => setCreateTask(res))
