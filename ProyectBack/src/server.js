@@ -1,7 +1,6 @@
 const express = require('express')
-const cors = requiere ('cors');
+const cors = require ('cors');
 const tablero = require('./routes/boardRoutes.js')
-const lista = require('./routes/listRoutes.js')
 const tarea = require('./routes/taskRoutes.js')
 const usuario = require('./routes/userRoutes.js')
 const app = express()
@@ -28,7 +27,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/board", tablero)
-app.use("/list",lista)
 app.use("/task",tarea)
 app.use("/user",usuario) //faltan agregar las app.use para boardList, listTask y userBoard
 

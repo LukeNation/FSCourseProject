@@ -22,9 +22,9 @@ module.exports.getTaskController = async (req,res) => {
 }
 
 module.exports.createTaskController = async(req,res) => {
-    const {titulo, cuerpo, prioridad, fechaCreacion, fechaActualizacion} = req.params
+    const {titulo, cuerpo, prioridad, autor, idTablero} = req.body
     try {
-        const task = await createTask(titulo, cuerpo, prioridad, fechaCreacion, fechaActualizacion)
+        const task = await createTask(titulo, cuerpo, prioridad,autor, idTablero)
         return res.send(task)
     } catch(err) {
         return res.send(err)
@@ -32,9 +32,10 @@ module.exports.createTaskController = async(req,res) => {
 }
 
 module.exports.updateTaskController = async (req,res) => {
-    const {id, titulo, cuerpo, prioridad, fechaCreacion, fechaActualizacion} = req.params
+    const {id} = req.params
+    const {titulo, cuerpo,autor, prioridad, idTablero} = req.body
     try {
-        const task = await updateTask(id, titulo, cuerpo, prioridad, fechaCreacion, fechaActualizacion)
+        const task = await updateTask(id, titulo, cuerpo, autor, prioridad, idTablero)
         return res.send(task)
     } catch(err) {
        

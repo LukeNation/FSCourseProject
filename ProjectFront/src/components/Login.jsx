@@ -31,6 +31,8 @@ const Login = () => {
                 console.log(data[0]);
                 navigate("/Board")
                 
+            }else{
+                alert('Usuario o contraseña incorrectos')
             }
             
             } catch(err) {

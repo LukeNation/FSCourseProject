@@ -6,7 +6,7 @@ module.exports.db = (query) => new Promise((req,res) => {
         host: process.env.LOCAL ? 'localhost': config.host,
         user: process.env.LOCAL ? 'root': config.user,
         password: process.env.LOCAL ? '': config.password,
-        database: process.env.LOCAL ? 'Treyo': config.DB
+        database: process.env.LOCAL ? 'treyo': config.database
     })
 
     connection.query(query, (error, data, fields) => {

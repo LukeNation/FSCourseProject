@@ -17,9 +17,10 @@ module.exports.getTask = async (id) => {
         tarea : data[0]
     }  
 }
+
 //para hacer el post a task/new
-module.exports.createTask = async(titulo, cuerpo, prioridad, fechaCreacion, fechaActualizacion) => {
-    const data = await db(`INSERT INTO TASK (titulo, cuerpo, prioridad, fechaCreacion, fechaActualizacion) VALUES ("${titulo}", "${cuerpo}", ${prioridad}, ${fechaCreacion}, ${fechaActualizacion})`)
+module.exports.createTask = async(titulo, cuerpo, prioridad, autor, idTablero) => {
+    const data = await db(`INSERT INTO TASK (titulo, cuerpo, autor, prioridad, idTablero) VALUES ("${titulo}", "${cuerpo}",${autor}, ${prioridad}, ${idTablero})`)
 
     return {
         message: `Tarea creada con id ${data.id}`
@@ -27,8 +28,8 @@ module.exports.createTask = async(titulo, cuerpo, prioridad, fechaCreacion, fech
 }
 
 //para hacer el put a task/update/:id
-module.exports.updateTask = async(id, titulo, cuerpo, prioridad, fechaCreacion, fechaActualizacion) => {
-    const data = await db(`UPDATE TASK SET titulo = "${titulo}", cuerpo = "${cuerpo}", prioridad = ${prioridad}, fechaCreacion = ${fechaCreacion}, fechaActualizacion = ${fechaActualizacion} WHERE id = ${id}`)
+module.exports.updateTask = async(id, titulo, cuerpo,autor, prioridad, idTablero) => {
+    const data = await db(`UPDATE TASK SET titulo = "${titulo}", cuerpo = "${cuerpo}", autor = ${autor}, prioridad = ${prioridad}, idTablero = ${idTablero} WHERE id = ${id}`)
     return {
         message: `Tarea actualizada con id ${data.id}`
     }
