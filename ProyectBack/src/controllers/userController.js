@@ -1,4 +1,4 @@
-const {getUserInfo, createUser, updateUser, updateUserToAdmin, todosUsers, getBoardsFromUsers, getTaskFromUsers} = require('../models/user')
+const {getUserInfo, createUser, updateUser, updateUserToAdmin, todosUsers, getBoardsFromUsers, getTaskFromUsers, usuarioContrasenaController} = require('../models/user')
 
 module.exports.todosUsersController = async (req,res) => {
     try {
@@ -21,6 +21,16 @@ module.exports.getUserInfoController = async (req,res) => {
     }
 }
 
+module.exports.usuarioContrasenaController = async (req,res) => {
+    const {usuario, contrasena} = req.body
+    try {
+        const user = await usuarioContrasenaController(usuario, contrasena)
+        return res.send(user)
+    } catch(err) {
+       
+        return res.send(err)
+    }
+}
 module.exports.createUserController = async(req,res) => {
     const {nombre, apellido, usuario, contrasena} = req.body
     try {

@@ -12,14 +12,14 @@ const Login = () => {
         usuario: "", 
         contrasena: ""
     })
-
+    
     const iniciarSesion = async (e) => {
         e.preventDefault()
         console.log(formData);
         let {usuario, contrasena} = formData
         
         try {
-            const respuesta = await fetch('http://localhost:4000/user/info/:id', {
+            const respuesta = await fetch('http://localhost:4000/user/info', {
                 method: "POST",
                 body: JSON.stringify({usuario, contrasena}),
                 headers: {'Content-Type': 'application/json'}
@@ -29,7 +29,8 @@ const Login = () => {
             
             if(data.lenght !== 0) {
                 console.log(data[0]);
-                navigate("/board") 
+                navigate("/logged")
+
             }else{
                 alert('Usuario o contraseña incorrectos')
             }

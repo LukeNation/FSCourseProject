@@ -17,7 +17,7 @@ const Register = () => {
         
         let { nombre, apellido, usuario, contrasena } = formData
         try {
-            const respuesta = await fetch('http://localhost:4000/new', {
+            const respuesta = await fetch('http://localhost:4000/user/new', {
                 method: "POST",
                 body: JSON.stringify({ nombre, apellido, usuario, contrasena }),
                 headers: { 'Content-Type': 'application/json' }
