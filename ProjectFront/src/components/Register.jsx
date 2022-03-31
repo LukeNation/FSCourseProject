@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router';
 import Navbar from './Navbar';
 
 
 
 const Register = () => {
+
+    let navigate = useNavigate()
 
     const [formData, setFormData] = useState({
         nombre: "",
@@ -25,6 +28,7 @@ const Register = () => {
 
             const data = await respuesta.json()
             console.log(data)
+            navigate("/login")
         } catch (err) {
             console.error(err)
         }

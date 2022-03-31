@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/board", tablero)
 app.use("/task",tarea)
-app.use("/user",usuario) //faltan agregar las app.use para boardList, listTask y userBoard
+app.use("/user",usuario) 
 
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'));
