@@ -1,56 +1,30 @@
 import React from 'react'
+import {TaskRow} from './TaskRow'
 
-function TaskList({createTask, setCreateTask}) {
+function TaskList({ taskItem, toggleTask }) {
 
-    const handelChange = (e) => {
-    setCreateTask({
-        ...createTask,
-        [e.target.name]: e.target.value
-    })
-}
-
-    const handelSubmit = (e) => {
-        e.preventDefault();
-        console.log(createTask)
-        // validacion de datos
-        if(createTask.titulo === ''){
-            alert('todos los campos son obligatorios')
-            return
-        }
-
-        // consutla
-
-        const requestInit = {
-            method: 'POST',
-            headers:{'Content-Type' : 'application/json'},
-            body: JSON.stringify(createTask)
-        }
-
-
-        fetch('http://localhost:4000/task/new', requestInit)
-        .then(res => res.json())
-        .then(res => console.log(res))
-        .then(res => setCreateTask(res))
-    }
-
-
+    const taskTableRows = () => (
+        taskItem.map(task => (
+            <TaskRow task={task} key={task.nombre} toggleTask={toggleTask}/>
+        ))
+    )
+                  
     return (
         <>
-            <div id='lista' className='col-md-4' style={{ width: '30%' }}>
-                <h3 className='text-center'>Registras tu tarea</h3>
-                <div id='editor' className='container-fluid'>
-                    <form onSubmit={handelSubmit} id="editorBox" className="input-group mb-3">
-                        <input
-                            type="text"
-                            className="form-control p-3"
-                            id="editorTarea"
-                            placeholder="Agregue una tarea"
-                            onChange={handelChange}
-                            name="title"
-                        />
-                    </form>
-                </div>
+            <div className="col-md-4">
+                <table className='table table-dark table-striped mt-4 p-2'>
+                    <thead>
+                        <tr>
+                            <th>Tareas</th>
+                            <th>Listo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {taskTableRows()}
+                    </tbody>
+                </table>
             </div>
+            
         </>
     )
 }

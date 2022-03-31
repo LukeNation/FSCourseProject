@@ -36,6 +36,18 @@
     flex-flow: row wrap;
     background-color: #FDC500;
   }
+
+  #formCSS {
+    background-color: #212529;
+    color: white;
+    height: 25%;
+    padding: 10px;
+    width: 25%;
+  }
+
+  #INPUT {
+    height: 40%;
+  }
   
   /*List*/
   #lista {

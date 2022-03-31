@@ -7,8 +7,8 @@ import {useNavigate} from 'react-router-dom';
 const Logged = () => {
 
     const [name, setName] = useState ([{
-        id: '0',
-        nombre: 'Agustin'
+        id: '',
+        nombre: ''
     }]);
     const [board, setBoard] = useState ([{
         id:'0',
@@ -17,7 +17,7 @@ const Logged = () => {
 
     useEffect(()=> {
     const getName = () => {
-        fetch('http://localhost:4000/User/:id')
+        fetch('http://localhost:4000/user/info/:id')
         .then(res => res.json())
         .then(res => setName(res))
     }    
