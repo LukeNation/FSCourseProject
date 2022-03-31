@@ -6,46 +6,23 @@ CREATE TABLE USER (
     usuario varchar(50),
     contrasena varchar(50)
 )
-CREATE TABLE USER-BOARD (
-    id int PRIMARY KEY AUTO_INCREMENT,
-    idUser int,
-    idBoard int,
-    isAdmin int
-)
 CREATE TABLE BOARD (
     id int PRIMARY KEY AUTO_INCREMENT,
     titulo varchar(30),
-    color varchar(30)
+    autor int not null
 )
-CREATE TABLE BOARD-LIST (
-    id int PRIMARY KEY AUTO_INCREMENT,
-    idList int,
-    idBoard int
-)
-CREATE TABLE LIST (
-    id int PRIMARY KEY AUTO_INCREMENT,
-    titulo varchar(50)
-)
-CREATE TABLE LIST-TASK (
-    id int PRIMARY KEY AUTO_INCREMENT,
-    idList int,
-    idTask int
-)
+
 CREATE TABLE TASK (
     id int PRIMARY KEY AUTO_INCREMENT,
     titulo varchar(50),
+    autor int not null,
     cuerpo text,
     prioridad int,
-    fechaCreacion date,
-    fechaActualizacion date
+    idBoard int not null
 )
 
 ALTER TABLE TASK ADD FOREIGN KEY (autor) REFERENCES USER(id);
-ALTER TABLE USER-BOARD ADD FOREIGN KEY (idUser) REFERENCES USER(id);
-ALTER TABLE USER-BOARD ADD FOREIGN KEY (idBoard) REFERENCES BOARD(id);
-ALTER TABLE BOARD-LIST ADD FOREIGN KEY (idBoard) REFERENCES BOARD(id);
-ALTER TABLE BOARD-LIST ADD FOREIGN KEY (idList) REFERENCES LIST(id);
-ALTER TABLE LIST-TASK ADD FOREIGN KEY (idList) REFERENCES LIST(id);
-ALTER TABLE LIST-TASK ADD FOREIGN KEY (idTask) REFERENCES TASK(id);
+ALTER TABLE BOARD ADD FOREIGN KEY (autor) REFERENCES USER(id);
+ALTER TABLE TASK ADD FOREIGN KEY (idBoard) REFERENCES BOARD(id);
 
 
