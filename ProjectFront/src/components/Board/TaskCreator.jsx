@@ -10,7 +10,7 @@ export const TaskCreator = props =>  {
         setNewTaskName('')
     }
     return (
-        <div className=" col-md-3 m-4" id='formCSS'>
+        <div className=" col-md-3 m-4 p-3" id='formCSS'>
             <h3 className='text-center'>Crear Tarea</h3>
             <input
              type="text" 
@@ -18,7 +18,7 @@ export const TaskCreator = props =>  {
              value={newTaskName} 
              onChange={updateNewTaskValue}
              />
-             <button className='btn btn-danger mt-2' onClick={createNewTask} >Agregar</button>
+             <button className='btn btn-danger mt-3 mx-1' onClick={createNewTask} >Agregar</button>
         </div>
     )
 }

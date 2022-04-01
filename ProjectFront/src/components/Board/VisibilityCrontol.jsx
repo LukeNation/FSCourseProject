@@ -10,7 +10,7 @@ export const VisibilityCrontol = props => {
         checked={props.isChecked}
         onChange={ e => props.callback(e.target.checked)}
       />
-      <label className="form-check-label text-white" htmlFor="flexCheckDefault">
+      <label className="form-check-label text-white">
          { props.description }
       </label>
     </div>

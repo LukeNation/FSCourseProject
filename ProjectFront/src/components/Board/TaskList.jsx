@@ -3,11 +3,12 @@ import {TaskRow} from './TaskRow'
 
 function TaskList({ taskItem, toggleTask }) {
 
-    const taskTableRows = () => (
-        taskItem.map(task => (
-            <TaskRow task={task} key={task.nombre} toggleTask={toggleTask}/>
-        ))
-    )
+    const taskTableRows = doneValue =>
+    taskItem
+      .filter(task => task.listo === doneValue)
+      .map(task => (
+        <TaskRow key={task.nombre} task={task} toggleTask={toggleTask} />
+      ));
                   
     return (
         <>
@@ -20,7 +21,7 @@ function TaskList({ taskItem, toggleTask }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {taskTableRows()}
+                        {taskTableRows(false)}
                     </tbody>
                 </table>
             </div>
