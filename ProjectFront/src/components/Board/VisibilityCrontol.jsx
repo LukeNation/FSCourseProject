@@ -2,15 +2,16 @@ import React from "react";
 
 export const VisibilityCrontol = props => {
   return (
-    <div className="form-check">
+    <div className="form-check m-2">
       <input
         type="checkbox"
-        className="form-check"
+        className="form-check-input"
+        id="flexCheckDefault"
         checked={props.isChecked}
         onChange={ e => props.callback(e.target.checked)}
       />
-      <label htmlFor="form-check-label">
-        { props.description }
+      <label className="form-check-label text-white" htmlFor="flexCheckDefault">
+         { props.description }
       </label>
     </div>
   );
