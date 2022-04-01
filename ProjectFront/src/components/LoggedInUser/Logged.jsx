@@ -41,7 +41,7 @@ const Logged = () => {
             <Navbar2 />
             <div className="container-fluid" id="FondoTogged">
                 <div className="tituloLogged text-center">
-                    <h1 key={name.id}>¡Hola,{name.nombre}!</h1>
+                    <h1 key={name.id}>¡Hola{name.nombre}!</h1>
                     <p>Qué bueno que llegaste. </p>
                     <p>¿Estás listx para crear un nuevo tablero o seguir trabajando en un proyecto anterior?</p>
                 </div>
