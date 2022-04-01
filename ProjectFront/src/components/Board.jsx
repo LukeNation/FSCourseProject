@@ -9,7 +9,7 @@ import Navbar2 from './Navbar2';
 
 
 const Board = () => {
-    const [userName, setUserName] = useState('Lucas Aprea');
+    const [userName, setUserName] = useState('Agustin Asaad');
 
     const [taskItem, setTaskItem] = useState([
         {nombre:'tarea para marce', listo: false},
@@ -23,7 +23,7 @@ const Board = () => {
         if (data != null) {
             setTaskItem(JSON.parse(data))
         } else {
-              setUserName("Lucas");
+              setUserName("Agustin");
               setTaskItem([
                 {nombre:'tarea para marce', listo: false},
               ]);
@@ -62,7 +62,7 @@ const Board = () => {
         <div className='tablero1'>
             <Navbar2 />
             <div id="board" className='container-fluid'>
-                <Bar />
+                <Bar userName={userName} taskItem={taskItem}/>
                 <div id="board1" className='row'>
                     <TaskCreator callback={createNewTask} />
                     <TaskList taskItem={taskItem} toggleTask={toggleTask} />
